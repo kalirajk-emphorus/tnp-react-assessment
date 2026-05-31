@@ -23,7 +23,7 @@ import { useNavigate } from "react-router-dom";
 import users from "../../data/user.json";
 import { login } from "../../features/auth/authSlice";
 
-function LoginPage() {
+const LoginPage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 

@@ -27,7 +27,7 @@ import {
     deleteJob,
 } from "../../features/jobs/jobSlice";
 
-function JobsPage() {
+const JobsPage = () => {
     const dispatch = useDispatch();
 
     const jobs = useSelector((state) => state.jobs.jobs || []);

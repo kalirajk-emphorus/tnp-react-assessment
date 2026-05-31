@@ -19,7 +19,7 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-function HomePage() {
+const HomePage = () => {
     const jobs = useSelector((state) => state.jobs.jobs || []);
     const featuredJobs = jobs.slice(0, 3);
     const categories = [...new Set(jobs.map((job) => job.category))];

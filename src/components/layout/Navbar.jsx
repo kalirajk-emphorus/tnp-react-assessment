@@ -22,7 +22,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../features/auth/authSlice";
 
-function Navbar() {
+const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -37,16 +37,16 @@ function Navbar() {
 
   const navLinks = isAdmin
     ? [
-        { label: "Dashboard", path: "/admin/dashboard" },
-        { label: "Jobs", path: "/jobs" },
-      ]
+      { label: "Dashboard", path: "/admin/dashboard" },
+      { label: "Jobs", path: "/jobs" },
+    ]
     : [
-        { label: "Home", path: "/" },
-        { label: "Jobs", path: "/jobs" },
-        ...(isAuthenticated
-          ? [{ label: "Applied", path: "/applied-jobs" }]
-          : []),
-      ];
+      { label: "Home", path: "/" },
+      { label: "Jobs", path: "/jobs" },
+      ...(isAuthenticated
+        ? [{ label: "Applied", path: "/applied-jobs" }]
+        : []),
+    ];
 
   return (
     <>

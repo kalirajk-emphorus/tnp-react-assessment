@@ -13,7 +13,7 @@ import {
   Chip,
 } from "@mui/material";
 
-function JobFormModal({
+const JobFormModal = ({
   open,
   onClose,
   isEditMode,
@@ -21,7 +21,7 @@ function JobFormModal({
   errors,
   handleChange,
   handleSave,
-}) {
+}) => {
   return (
     <Dialog
       open={open}

@@ -1,10 +1,10 @@
 import { Box, Pagination } from "@mui/material";
 
-function JobsPagination({
+const JobsPagination = ({
   page,
   totalPages,
   setPage,
-}) {
+}) => {
   if (totalPages <= 1) return null;
 
   const handleChange = (event, value) => {

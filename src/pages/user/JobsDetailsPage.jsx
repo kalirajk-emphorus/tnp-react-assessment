@@ -21,7 +21,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { applyJob } from "../../features/applications/applicationSlice";
 
-function JobsDetailsPage() {
+const JobsDetailsPage = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
 

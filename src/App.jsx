@@ -20,7 +20,7 @@ import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import { setJobs } from "./features/jobs/jobSlice";
 import jobsData from "./data/jobs.json";
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {

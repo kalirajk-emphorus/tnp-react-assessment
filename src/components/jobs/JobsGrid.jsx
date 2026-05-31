@@ -8,12 +8,12 @@ import SearchOffIcon from "@mui/icons-material/SearchOff";
 
 import JobsCard from "./JobsCard";
 
-function JobsGrid({
+const JobsGrid = ({
   jobs,
   isAdmin,
   handleOpenEdit,
   handleDelete,
-}) {
+}) => {
 
   if (jobs.length === 0) {
     return (
