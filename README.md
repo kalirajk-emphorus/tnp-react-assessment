@@ -1,258 +1,175 @@
-# ShopEase - E-Commerce Web Application
+*# Job Portal Management System (Frontend)
 
-A full-featured E-Commerce web application built with React.js and Redux Toolkit. The application provides user authentication, product management, shopping cart functionality, order processing, search, pagination, and a complete checkout experience.
-
----
-
-# Features
-
-## Authentication
-
-* User Signup and Login
-* Role-Based Access Control (Admin/User)
-* Persistent Authentication using Local Storage
-* Session Persistence Across Refreshes
+A modern Job Portal web application built using React.js, Redux Toolkit, and Material UI.  
+This project demonstrates a real-world job portal with both User and Admin functionalities using dummy/mock data.
 
 ---
 
-## Product Management
+##  Project Overview
 
-* View All Products
-* Product Search Functionality
-* Product Details Page
-* Pagination Support
-* Admin Product Management
+This project is developed as part of a frontend machine test to evaluate:
 
-  * Add Products
-  * Edit Products
-  * Delete Products
+- Frontend development skills
+- State management using Redux Toolkit
+- API/mock data handling
+- Code quality and scalability
+- UI/UX implementation
 
 ---
 
-## Cart Management
+## Features
 
-* Add Products to Cart
-* Increase / Decrease Product Quantity
-* Remove Products from Cart
-* User-Specific Cart Storage
-* Persistent Cart Across Refreshes
+###  User Features
 
----
-
-## Checkout System
-
-* Order Summary Page
-* GST Calculation (18%)
-* Coupon Code Validation
-* Discount Application
-* Order Placement
-* Automatic Cart Clearance After Successful Checkout
+- Job listing page with pagination
+- Advanced filtering (category, experience level)
+- Job details page
+- Apply for jobs functionality
+- Responsive landing page with featured jobs
 
 ---
 
-## Orders
+###  Admin Features
 
-Orders are stored using JSON Server and include:
-
-* Ordered Items
-* Subtotal
-* GST Amount
-* Discount Amount
-* Total Amount
-* Order Date
+- Admin login (dummy authentication)
+- Dashboard page
+- Create, edit, and delete job postings
+- Job listing management
+- Pagination and filtering support
 
 ---
 
-## Search & Pagination
+## State Management (Redux Toolkit)
 
-* Search Products by Name
-* Client-Side Pagination
-* Previous / Next Navigation
+All application state is managed using Redux Toolkit:
 
----
-
-## UI / UX Features
-
-* Responsive Design
-* Modern User Interface
-* Tailwind CSS Styling
-* Snackbar Notifications
-* Loading Skeletons
-* Confirmation Dialogs
+- Authentication state (admin/user)
+- Job listings data
+- Applied jobs data
+- Filters (category, experience, search)
+- Pagination state
 
 ---
 
-# Tech Stack
+## Tech Stack
 
-## Frontend
-
-* React.js
-* Redux Toolkit
-* React Router DOM
-* Tailwind CSS
-* React Hook Form
-
-## Backend (Mock API)
-
-* JSON Server
+- React.js
+- Redux Toolkit
+- React Router DOM
+- Material UI (MUI)
+- JavaScript (ES6+)
+- HTML5
+- CSS3
 
 ---
 
-# Project Structure
+## Project Structure
 
-```text
 src/
-│
+
+src/
+├── app/
 ├── assets/
-│
 ├── components/
-│   ├── cart/
-│   ├── common/
-│   ├── layout/
-│   └── product/
-│
-├── hooks/
-│
+├── data/
+├── features/
+├── layouts/
 ├── pages/
-│
-├── redux/
-│
 ├── routes/
-│
-├── services/
-│
+├── styles/
 ├── utils/
-│
-├── App.jsx
 ├── App.css
+├── App.jsx
 ├── index.css
 └── main.jsx
-```
 
 ---
 
-# Installation & Setup
+## Installation & Setup
 
-## 1. Clone the Repository
+### 1. Clone the repository
 
-```bash
-git clone https://github.com/kalirajk-emphorus/ecommerce-app.git
-```
+git clone https://github.com/kalirajk-emphorus/tnp-react-assessment.git
 
-## 2. Navigate to the Project Directory
+---
 
-```bash
-cd ecommerce-app
-```
+### 2. Navigate to project directory
 
-## 3. Install Dependencies
+cd tnp-react-assessment
 
-```bash
+---
+
+### 3. Install dependencies
+
 npm install
-```
 
-## 4. Start the Mock Backend Server
+---
 
-Open a terminal and run:
+### 4. Start the application
 
-```bash
-npm run server
-```
-
-This starts the JSON Server that provides the mock API for products, users, carts, and orders.
-
-## 5. Start the Frontend Application
-
-Open another terminal and run:
-
-```bash
 npm run dev
-```
 
-The application will be available at:
-
-```text
+The application will run at:
 http://localhost:5173
-```
-
-### Important
-
-Both the frontend application and the JSON Server must be running simultaneously.
-
-Terminal 1:
-
-```bash
-npm run server
-```
-
-Terminal 2:
-
-```bash
-npm run dev
-```
 
 ---
 
-# Demo Credentials
+## Authentication (Dummy Login)
 
-## User Account
+Admin Login:
+username: admin  
+password: admin123  
 
-```text
-Email: test@test.com
-Password: test123
-```
-
-## Admin Account
-
-```text
-Email: admin@test.com
-Password: admin123
-```
+User Login:
+username: user  
+password: user123  
 
 ---
 
-# Notes
+## Key Functionalities
 
-* This project uses JSON Server as a mock backend.
-* Data is stored locally for demonstration purposes.
-* Authentication is implemented using Local Storage.
-* No environment variables are required to run the application.
-* This project was developed as part of a React.js assessment task.
-* The application is intended for learning and evaluation purposes.
-
----
-
-# Future Enhancements
-
-* Payment Gateway Integration
-* Wishlist Functionality
-* Product Categories and Filters
-* User Profile Management
-* Order Tracking
-* Backend API Integration
-* JWT Authentication with Refresh Tokens
-* Product Reviews and Ratings
+- Pagination for job listings
+- Filtering by category and experience
+- Job CRUD operations (Admin)
+- Job application flow (User)
+- Role-based routing
+- Responsive UI design
 
 ---
 
-# Author
+## UI/UX Highlights
 
-**Kaliraj K**
-
-GitHub: https://github.com/kalirajk-emphorus
-
----
-
-# License
-
-MIT License
-
-Copyright (c) 2026 Kaliraj K
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files to deal in the software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+- Clean and modern Material UI design
+- Fully responsive layout (mobile + desktop)
+- Card-based job listings
+- Smooth navigation flow
+- Loading and empty states handled
 
 ---
 
-Thank you for reviewing this project.
+## Future Improvements
+
+- Backend integration with database
+- JWT authentication system
+- Save job functionality
+- Email notifications for applications
+- Admin analytics dashboard
+
+---
+
+##  Author
+
+Kaliraj K  
+Frontend Developer (React.js)
+
+---
+
+## License
+
+This project is for educational and machine test evaluation purposes only.
+
+---
+
+## Note
+
+This project uses mock/dummy data only and does not include backend or environment configuration.*
