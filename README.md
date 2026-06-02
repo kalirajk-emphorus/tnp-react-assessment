@@ -1,175 +1,258 @@
-# Job Portal Management System (Frontend)
+# ShopEase - E-Commerce Web Application
 
-A modern Job Portal web application built using React.js, Redux Toolkit, and Material UI.  
-This project demonstrates a real-world job portal with both User and Admin functionalities using dummy/mock data.
-
----
-
-##  Project Overview
-
-This project is developed as part of a frontend machine test to evaluate:
-
-- Frontend development skills
-- State management using Redux Toolkit
-- API/mock data handling
-- Code quality and scalability
-- UI/UX implementation
+A full-featured E-Commerce web application built with React.js and Redux Toolkit. The application provides user authentication, product management, shopping cart functionality, order processing, search, pagination, and a complete checkout experience.
 
 ---
 
-## Features
+# Features
 
-###  User Features
+## Authentication
 
-- Job listing page with pagination
-- Advanced filtering (category, experience level)
-- Job details page
-- Apply for jobs functionality
-- Responsive landing page with featured jobs
-
----
-
-###  Admin Features
-
-- Admin login (dummy authentication)
-- Dashboard page
-- Create, edit, and delete job postings
-- Job listing management
-- Pagination and filtering support
+* User Signup and Login
+* Role-Based Access Control (Admin/User)
+* Persistent Authentication using Local Storage
+* Session Persistence Across Refreshes
 
 ---
 
-## State Management (Redux Toolkit)
+## Product Management
 
-All application state is managed using Redux Toolkit:
+* View All Products
+* Product Search Functionality
+* Product Details Page
+* Pagination Support
+* Admin Product Management
 
-- Authentication state (admin/user)
-- Job listings data
-- Applied jobs data
-- Filters (category, experience, search)
-- Pagination state
-
----
-
-## Tech Stack
-
-- React.js
-- Redux Toolkit
-- React Router DOM
-- Material UI (MUI)
-- JavaScript (ES6+)
-- HTML5
-- CSS3
+  * Add Products
+  * Edit Products
+  * Delete Products
 
 ---
 
-## Project Structure
+## Cart Management
 
+* Add Products to Cart
+* Increase / Decrease Product Quantity
+* Remove Products from Cart
+* User-Specific Cart Storage
+* Persistent Cart Across Refreshes
+
+---
+
+## Checkout System
+
+* Order Summary Page
+* GST Calculation (18%)
+* Coupon Code Validation
+* Discount Application
+* Order Placement
+* Automatic Cart Clearance After Successful Checkout
+
+---
+
+## Orders
+
+Orders are stored using JSON Server and include:
+
+* Ordered Items
+* Subtotal
+* GST Amount
+* Discount Amount
+* Total Amount
+* Order Date
+
+---
+
+## Search & Pagination
+
+* Search Products by Name
+* Client-Side Pagination
+* Previous / Next Navigation
+
+---
+
+## UI / UX Features
+
+* Responsive Design
+* Modern User Interface
+* Tailwind CSS Styling
+* Snackbar Notifications
+* Loading Skeletons
+* Confirmation Dialogs
+
+---
+
+# Tech Stack
+
+## Frontend
+
+* React.js
+* Redux Toolkit
+* React Router DOM
+* Tailwind CSS
+* React Hook Form
+
+## Backend (Mock API)
+
+* JSON Server
+
+---
+
+# Project Structure
+
+```text
 src/
-
-src/
-├── app/
+│
 ├── assets/
+│
 ├── components/
-├── data/
-├── features/
-├── layouts/
+│   ├── cart/
+│   ├── common/
+│   ├── layout/
+│   └── product/
+│
+├── hooks/
+│
 ├── pages/
+│
+├── redux/
+│
 ├── routes/
-├── styles/
+│
+├── services/
+│
 ├── utils/
-├── App.css
+│
 ├── App.jsx
+├── App.css
 ├── index.css
 └── main.jsx
+```
 
 ---
 
-## Installation & Setup
+# Installation & Setup
 
-### 1. Clone the repository
+## 1. Clone the Repository
 
-git clone https://github.com/kalirajk-emphorus/tnp-react-assessment.git
+```bash
+git clone https://github.com/kalirajk-emphorus/ecommerce-app.git
+```
 
----
+## 2. Navigate to the Project Directory
 
-### 2. Navigate to project directory
+```bash
+cd ecommerce-app
+```
 
-cd tnp-react-assessment
+## 3. Install Dependencies
 
----
-
-### 3. Install dependencies
-
+```bash
 npm install
+```
 
----
+## 4. Start the Mock Backend Server
 
-### 4. Start the application
+Open a terminal and run:
 
+```bash
+npm run server
+```
+
+This starts the JSON Server that provides the mock API for products, users, carts, and orders.
+
+## 5. Start the Frontend Application
+
+Open another terminal and run:
+
+```bash
 npm run dev
+```
 
-The application will run at:
+The application will be available at:
+
+```text
 http://localhost:5173
+```
+
+### Important
+
+Both the frontend application and the JSON Server must be running simultaneously.
+
+Terminal 1:
+
+```bash
+npm run server
+```
+
+Terminal 2:
+
+```bash
+npm run dev
+```
 
 ---
 
-## Authentication (Dummy Login)
+# Demo Credentials
 
-Admin Login:
-username: admin  
-password: admin123  
+## User Account
 
-User Login:
-username: user  
-password: user123  
+```text
+Email: test@test.com
+Password: test123
+```
 
----
+## Admin Account
 
-## Key Functionalities
-
-- Pagination for job listings
-- Filtering by category and experience
-- Job CRUD operations (Admin)
-- Job application flow (User)
-- Role-based routing
-- Responsive UI design
+```text
+Email: admin@test.com
+Password: admin123
+```
 
 ---
 
-## UI/UX Highlights
+# Notes
 
-- Clean and modern Material UI design
-- Fully responsive layout (mobile + desktop)
-- Card-based job listings
-- Smooth navigation flow
-- Loading and empty states handled
-
----
-
-## Future Improvements
-
-- Backend integration with database
-- JWT authentication system
-- Save job functionality
-- Email notifications for applications
-- Admin analytics dashboard
+* This project uses JSON Server as a mock backend.
+* Data is stored locally for demonstration purposes.
+* Authentication is implemented using Local Storage.
+* No environment variables are required to run the application.
+* This project was developed as part of a React.js assessment task.
+* The application is intended for learning and evaluation purposes.
 
 ---
 
-##  Author
+# Future Enhancements
 
-Kaliraj K  
-Frontend Developer (React.js)
+* Payment Gateway Integration
+* Wishlist Functionality
+* Product Categories and Filters
+* User Profile Management
+* Order Tracking
+* Backend API Integration
+* JWT Authentication with Refresh Tokens
+* Product Reviews and Ratings
 
 ---
 
-## License
+# Author
 
-This project is for educational and machine test evaluation purposes only.
+**Kaliraj K**
+
+GitHub: https://github.com/kalirajk-emphorus
 
 ---
 
-## Note
+# License
 
-This project uses mock/dummy data only and does not include backend or environment configuration.
+MIT License
+
+Copyright (c) 2026 Kaliraj K
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files to deal in the software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+---
+
+Thank you for reviewing this project.
